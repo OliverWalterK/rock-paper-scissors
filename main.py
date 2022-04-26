@@ -9,7 +9,6 @@ cap = cv2.VideoCapture(0)
 data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 
 def computer_choice():
-
     rng = random.randint(1,3)
     if rng == 1:
         X = 'Rock'
@@ -17,12 +16,10 @@ def computer_choice():
         X = 'Scissor'
     else:
         X = 'Paper'
-
-    print("The computer chooses " + X + "!")
+    print("The computer chose " + X + "!")
     return X
 
-def player_choice(prediction, accuracy = 0.7):
-
+def player_choice(prediction, accuracy = 0.5):
     if prediction[0][0] > accuracy:
         Y = "Rock"
     elif prediction[0][1] > accuracy:
@@ -31,12 +28,10 @@ def player_choice(prediction, accuracy = 0.7):
         Y = "Paper"
     else:
         Y = "Unknown."
-
-    print("You chooses " + Y + "!")
+    print("You chose " + Y + "!")
     return Y
 
 def game_evaluation(X, Y):
-
     global player_win_count, computer_win_count
     if X == Y:
         print("Draw!")
@@ -80,13 +75,10 @@ print("Okay! Let's play best of three :)")
 start_time = time.time()
 
 while True: 
-
     ret, frame = cap.read()
     cv2.imshow('Rock_Paper_Scissor', frame)
-   
     current_time = time.time()
     ready = True
-
     if int(current_time - start_time)%8 == 0 and int(current_time - start_time) > 1 and ready:
         prediction = get_prediction(frame)
         game_evaluation(Y = player_choice(prediction), X = computer_choice())
