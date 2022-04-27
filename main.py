@@ -40,69 +40,100 @@ def player_choice(accuracy = 0.5):
     elif prediction[0][2] > accuracy:
         Y = "Paper"
     else:
-        Y = "I did not catch that."
+        Y = "?"
     print("You chose " + Y + "!")
     return Y
 
 def game_evaluation(X, Y):
     '''
-    This function will evaluate based on the X and Y values from previous functions whether the computer or the player wins the round.
+    This function will evaluate whether the computer or the player wins based on the X and Y values from previous functions.
     '''
     global player_win_count, computer_win_count
     if X == Y:
-        print("Draw!")
+        print("You both chose the same! It's a draw!")
     elif X == "Rock" and Y == "Paper":
-        print("You win!")
+        print("You win a round!")
         player_win_count += 1
     elif X == "Scissor" and Y == "Rock":
-        print("You win!")
+        print("You win a round!")
         player_win_count += 1
     elif X == "Paper" and Y == "Scissor":
-        print("You win!")
+        print("You win a round!")
         player_win_count += 1
-    elif Y == 'Unknown':
+    elif Y == '?':
         print('I was not able to decipher your hand gesture!')
     else:
-        print("Computer wins!")
+        print("Computer wins this round!")
         computer_win_count +=1
-
-def countdown(t):
-    while t:
-      mins = t // 60
-      secs = t % 60
-      timer = '{:02d}:{:02d}'.format(mins, secs)
-      print(timer, end="\r") # overwrite previous line 
-      time.sleep(1)
-      t -= 1
-    print('Rock Paper Scissor!!!')
-
 
 print("Welcome to my game of rock, paper, scissors!")
 answer = input("Do you want to play? Y/N ")
 if answer != "Y".lower():
     quit()
 print("Okay! Let's play best of three :)")
-start_time = time.time()
-
-while True: 
+counter = 0
+max = 200
+while counter < max: 
     ret, frame = cap.read()
+    counter += 1
     cv2.imshow('Rock_Paper_Scissor', frame)
-    current_time = time.time()
-    ready = True
-    if int(current_time - start_time)%8 == 0 and int(current_time - start_time) > 1 and ready:
+    if counter / 40 == 1:
+        print("Ready")
+    if counter / 80 == 1:
+        print("Set")
+    if counter / 120 == 1:
+        print("Go!")
         game_evaluation(Y = player_choice(), X = computer_choice())
         print("Player score: ", player_win_count)
         print("Computer score: ", computer_win_count)
-        ready = False
-        countdown(3)
-        ready = True
-        if player_win_count == 3:
-            print("You win the game!")
-            break
-        elif computer_win_count == 3:
-            print("Computer wins the game!")
-            break
-    if cv2.waitKey(1) & 0xFF == ord('q'): 
+    if counter / 160 == 1:
+        counter = 0
+    if player_win_count == 3:
+        print("You win the game!")
+        break
+    elif computer_win_count == 3:
+        print("Computer wins the game!")
+        break
+    if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 cap.release()
 cv2.destroyAllWindows()
+
+# def countdown(t):
+#     while t:
+#       mins = t // 60
+#       secs = t % 60
+#       timer = '{:02d}:{:02d}'.format(mins, secs)
+#       print(timer, end="\r") # overwrite previous line 
+#       time.sleep(1)
+#       t -= 1
+#     print('Rock Paper Scissor!!!')
+
+# print("Welcome to my game of rock, paper, scissors!")
+# answer = input("Do you want to play? Y/N ")
+# if answer != "Y".lower():
+#     quit()
+# print("Okay! Let's play best of three :)")
+# start_time = time.time()
+# while True: 
+#     ret, frame = cap.read()
+#     cv2.imshow('Rock_Paper_Scissor', frame)
+#     current_time = time.time()
+#     ready = True
+#     if int(current_time - start_time)%8 == 0 and int(current_time - start_time) > 1 and ready:
+#         game_evaluation(Y = player_choice(), X = computer_choice())
+#         print("Player score: ", player_win_count)
+#         print("Computer score: ", computer_win_count)
+#         ready = False
+#         countdown(3)
+#         ready = True
+#         if player_win_count == 3:
+#             print("You win the game!")
+#             break
+#         elif computer_win_count == 3:
+#             print("Computer wins the game!")
+#             break
+#     if cv2.waitKey(1) & 0xFF == ord('q'): 
+#         break
+# cap.release()
+# cv2.destroyAllWindows()
