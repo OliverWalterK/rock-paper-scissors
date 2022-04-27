@@ -7,4 +7,4 @@ The game is played with the webcam. It also uses a machine learning model that h
 
 ### **Limitations:**
 
-The code will use the CPU speed of your system and introduce a "fake" timer. The timer will speed up for faster CPU's and slow down for slower CPU's. The reason for this is to appear as though the webcam stream of imgaes never stops. I did not want a countdown that would stop the video feed/loop.
+The code will use the CPU speed of your system and introduce a "fake" timer. The timer will speed up for faster CPU's and slow down for slower CPU's. The reason for this is to appear as though the webcam stream of images never stops. I did not want an actual countdown that would stop the video feed/loop.
