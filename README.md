@@ -36,4 +36,4 @@ The game code structure will be as follows:
 
 ### **Limitations:**
 
-The code will use the CPU speed of your system and introduce a "fake" timer. The timer will speed up for faster CPU's and slow down for slower CPU's. The reason for this is to appear as though the webcam stream of images never stops. I did not want an actual countdown that would stop the video feed/loop.
+The code will use the FPS from the webcam and introduce a "fake" timer. The timer will speed up for faster CPU's/camera framerates and slow down for other. The reason for this is to appear as though the webcam stream of images never stops. I did not want an actual countdown that would stop the video feed/loop.
