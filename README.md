@@ -1,10 +1,9 @@
 # Rock-Paper-Scissors
-
+---
 
 This is my first project under AiCore where I code the famous rock, paper, scissors game. The game is played with the webcam. It also uses a machine learning model that has been trained by me to distinguish between the three options (rock, paper or scissors). The model was made via [Teachable Machine](http://www.teachablemachine.withgoogle.com)
 
 ## Milestone 1
----
 
 Using the website: teachable machine, one is able to create a machine learning model that can be trained using video or audio data. For this application, we will use the webcam to give the model a stream of pictures. The model will then, with a percentage accuracy, determine what hand gesture has been performed by the user. This is rock, paper, scissors after all..
 
@@ -17,7 +16,6 @@ After the model has been trained, one is able to download the model and use it i
 ![Screenshot 2022-06-08 162739](https://user-images.githubusercontent.com/97681246/172657544-2df81620-cb3c-4167-b15f-9fe21b559ffb.png)
 
 ## Milestone 2
----
 
 The game code structure will be as follows:
 1. The computer's "hand" gesture will be determined through the introduction of randomness. To be specific, the computer will take a value of 1-3, at random, which each number signifying either rock, paper or scissors.
