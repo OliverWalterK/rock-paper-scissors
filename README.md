@@ -7,9 +7,13 @@ This is my first project under AiCore where I code a rock, paper, scissors game.
 ---
 
 Using the website: teachable machine, one is able to create a machine learning model that can be trained using video or audio data. For this application, we will use the webcam to give the model a stream of pictures. The model will then, with a percentage accuracy, determine what hand gesture has been performed by th user. This is rock, paper, scissors after all..
+
 ![Screenshot 2022-06-08 162702](https://user-images.githubusercontent.com/97681246/172657430-33b13375-2440-4e5d-b995-c21d5685fa48.png)
+
 This shows how the model is about to be trained with the three options of rock, paper or scissors.
+
 ![Screenshot 2022-06-08 162739](https://user-images.githubusercontent.com/97681246/172657544-2df81620-cb3c-4167-b15f-9fe21b559ffb.png)
+
 After the model has been trained, one is able to download the model and use it in our game code.
 
 ### Milestone 2
