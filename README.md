@@ -20,10 +20,15 @@ After the model has been trained, one is able to download the model and use it i
 ---
 
 The game code structure will be as follows:
-1. The computer's "hand" gesture will be determined through the introduction of randomness. To be specific, the computer will take a value of 1-3 at random which each number signifying either rock, paper or scissors.
+1. The computer's "hand" gesture will be determined through the introduction of randomness. To be specific, the computer will take a value of 1-3, at random, which each number signifying either rock, paper or scissors.
 ![image](https://user-images.githubusercontent.com/97681246/172658641-9b0ee7d5-d91c-4edd-a856-af9cefd55862.png)
 
-2.
+2. The player will perform its hand gesture into the camera. The computer will then, based on the teachable machine model, determine which hand gesture was seen. The code will also set a accuracy of 50% meaning that if the model is atleast 50% positive about the shape, it will determine it to be what it sees.
+![image](https://user-images.githubusercontent.com/97681246/172659546-ae9e281b-366e-45f1-8d70-45f20c90a77f.png)
+
+3. The computer will now evaluate, based on the players hand gesture, which player has won the round.
+![image](https://user-images.githubusercontent.com/97681246/172659796-0ed265a5-f865-4957-8a23-a7384f0438b7.png)
+
 
 ### **Limitations:**
 
