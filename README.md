@@ -29,7 +29,7 @@ The game code structure will be as follows:
 3. The computer will now evaluate, based on the players hand gesture, which player has won the round.
 ![image](https://user-images.githubusercontent.com/97681246/172659796-0ed265a5-f865-4957-8a23-a7384f0438b7.png)
 
-4. The game will run on the following code. If the player wishes to start the game, run the application and press (Y) to start the game. A timer will start and everytime the timer reaches 0, a picture will be taken. The video feed remains active so you can see yourself in the camera! After each round, the computer will say who won the point and what the score is. Once a player has reached the score of 3, the game is over!
+4. The game will run on the following code. If the player wishes to start the game, run the application and press (Y) to start the game. A timer will start and everytime the timer reaches 0, a picture will be taken. The video feed remains active so you can see yourself in the camera! After each round, the computer will say who won the point and what the score is. When a player has scored 3 points, the application terminates.
 ![image](https://user-images.githubusercontent.com/97681246/172660409-1c56f2ff-3b4d-4051-af78-32f451432729.png)
 
 ### **Limitations:**
