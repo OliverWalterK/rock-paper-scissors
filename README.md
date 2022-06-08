@@ -1,5 +1,5 @@
 # Rock-Paper-Scissors
--
+
 
 This is my first project under AiCore where I code the famous rock, paper, scissors game. The game is played with the webcam. It also uses a machine learning model that has been trained by me to distinguish between the three options (rock, paper or scissors). The model was made via [Teachable Machine](http://www.teachablemachine.withgoogle.com)
 
