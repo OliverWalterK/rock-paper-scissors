@@ -20,7 +20,10 @@ After the model has been trained, one is able to download the model and use it i
 ---
 
 The game code structure will be as follows:
-1.
+1. The computer's "hand" gesture will be determined through the introduction of randomness. To be specific, the computer will take a value of 1-3 at random which each number signifying either rock, paper or scissors.
+![image](https://user-images.githubusercontent.com/97681246/172658641-9b0ee7d5-d91c-4edd-a856-af9cefd55862.png)
+
+2.
 
 ### **Limitations:**
 
