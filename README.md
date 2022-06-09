@@ -12,8 +12,8 @@ This picture below shows how the model is about to be trained with the three opt
 ![Screenshot 2022-06-08 162702](https://user-images.githubusercontent.com/97681246/172657430-33b13375-2440-4e5d-b995-c21d5685fa48.png)
 
 ### **Limitations**
-
-The model was trained with a lot of background visual 'noise' so to speak. There is room for a lot of improvement if one removes the face/person from the background.
+---
+The model was trained with a lot of background visual 'noise', so to speak. There is room for a lot of improvement if one removes the face/person from the background since the person/background will change for different users.
 
 After the model has been trained, one is able to download the model and use it in our game code.
 
