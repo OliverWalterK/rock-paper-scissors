@@ -40,5 +40,7 @@ The game code structure will be as follows:
 ![image](https://user-images.githubusercontent.com/97681246/172660409-1c56f2ff-3b4d-4051-af78-32f451432729.png)
 
 ### **Limitations:**
-
+---
 The code will use the FPS from the webcam and introduce a "fake" timer. The timer will speed up for faster CPU's/camera framerates and slow down for other. The reason for this is to appear as though the webcam stream of images never stops. I did not want an actual countdown that would stop the video feed/loop.
+
+---
